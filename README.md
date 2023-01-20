@@ -32,7 +32,7 @@ The [scripts folder](https://github.com/neuropoly/pediatric-DL-registration/tree
 * Evaluating the registration learning-based approaches on segmentations after warping
 * Jacobian determinant calculations
 * Time calculations
-ANTs commands used to pre-register the images are available in.... Finally, some basic functions for plotting results are also available in ....
+ANTs commands used to pre-register the images are available in [DataHandle.py](https://github.com/neuropoly/pediatric-DL-registration/blob/main/scripts/DataHandle.py)
 
 # References
 
