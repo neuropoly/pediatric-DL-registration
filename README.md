@@ -2,7 +2,7 @@
 
 The objective of this project is to use deep learning (DL) techniques for registering
 pediatric brain MRI scans and allowing quicker processing time. 
-DeepReg version 0.1.0 [1] is used to implement the unsupervised learning-based registration task. It is a tensorflow based implementation DL toolbox with unsupervised and weakly-supervised algorithms. The U-Net architecture was used and the output is a dense displacement field (DDF). One can easily train different networks using configuration files. The [config files](https://github.com/neuropoly/pediatric-DL-registration/tree/main/config_files) used in this work are available in this repository. DeepReg's GitHub repository [2] is available for further consultations with scripts coded in Python. 
+[DeepReg version 0.1.0](https://deepreg.readthedocs.io/en/v0.1.0/tutorial/registration.html) [1] is used to implement the unsupervised learning-based registration task. The only main modification is the removal of affine data augmentation in the automatic pre-processing steps available in their framework. It is a tensorflow based implementation DL toolbox with unsupervised and weakly-supervised algorithms. The U-Net architecture was used and the output is a dense displacement field (DDF). One can easily train different networks using configuration files. The [config files](https://github.com/neuropoly/pediatric-DL-registration/tree/main/config_files) used in this work are available in this repository. DeepReg's GitHub repository [2] is available for further consultations with scripts coded in Python. 
 
 # Requirements
 
