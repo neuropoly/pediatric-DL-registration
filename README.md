@@ -41,6 +41,6 @@ ANTs commands used to pre-register the images are available in [DataHandle.py](h
 
 # Citing this work
 If some of these implementations helped you, please don't hesitate to cite the followings:
-A. Dimitrijevic, V. Noblet, and B. De Leener, “Deep Learning-Based Longitudinal Intra-subject Registration of Pediatric Brain MR Images,” in Biomedical Image Registration, 2022, pp. 206–210.
+- A. Dimitrijevic, V. Noblet, and B. De Leener, “Deep Learning-Based Longitudinal Intra-subject Registration of Pediatric Brain MR Images,” in Biomedical Image Registration, 2022, pp. 206–210.
 -...
 
