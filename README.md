@@ -34,7 +34,7 @@ The pair-based registration (with registration done on all possible pairs (431 p
 * Rigid and affine registered via ANTs intra-subject pairs (RigidAffineReg)
 
 These three different inputs were used and compared SyN ANTs as shown in the figure below:
-![](/images/scheme.png "Scheme of all three initialization approaches used")
+![](/images/schema_global.png "Scheme of all three initialization approaches used")
 
 The [scripts folder](https://github.com/neuropoly/pediatric-DL-registration/tree/main/scripts) contains multiple functions and bash scripts for: <br /> 
 * Training all intra-subject pairs
