@@ -6,13 +6,21 @@ pediatric brain MRI scans and allowing quicker processing time.
 
 # Requirements
 
-DeepReg github repository from march 1st 2021 (version 0.1.0) and all its dependencies have to be 
+DeepReg github repository from march 1st 2021 (version 0.0.0) and all its dependencies have to be 
 installed in order to train the DL model with the yaml files. Refer to DeepReg
-documentation for specifics around the variables in the configuration files. 
+documentation for specifics around the variables in the configuration files. To install all dependencies related to running DeepReg, run the following line of code to create a deepreg environment:
+
+```
+conda env create -f env_deepreg.yml
+```
+
+## Dataset
 The [Calgary Preschool dataset](https://osf.io/axz5r/) is employed with its T1-weighted MRI images.
 A total of 64 subjects is utilized to have at least two time-point images per
 subject. The selected 64 subjects are presented in PatientDict.txt with the first 
 column being the subject and the second all image scanIDs. <br />
+
+## Preprocessing
 Images were first N4 bias field corrected as well as rescaled to 1.5 mm isotropic resolution using FLIRT version 6.0 (-applyisoxfm option).
 Template-based registration (with every image registered in a pediatric template space; [NIST 4.5-8.5 y.o. pediatric atlas](http://nist.mni.mcgill.ca/pediatric-atlases-4-5-18-5y/)) was used to obtain white matter (WM), gray matter (GM) and cerebrospinal fluid (CSF) segmentations for each subject for validation puposes. 
 
@@ -24,7 +32,7 @@ The pair-based registration (with registration done on all possible pairs (431 p
 * Rigidly registered via ANTs intra-subject pairs (RigidReg)
 * Rigid and affine registered via ANTs intra-subject pairs (RigidAffineReg)
 
-These three different inputs were used and compared to equivalent ANTs pipelines as shown in the figure below:
+These three different inputs were used and compared SyN ANTs as shown in the figure below:
 ![](/images/scheme.png "Scheme of all three initialization approaches used")
 
 The [scripts folder](https://github.com/neuropoly/pediatric-DL-registration/tree/main/scripts) contains multiple functions and bash scripts for: <br /> 
@@ -32,7 +40,7 @@ The [scripts folder](https://github.com/neuropoly/pediatric-DL-registration/tree
 * Evaluating the registration learning-based approaches on segmentations after warping
 * Jacobian determinant calculations
 * Time calculations
-ANTs commands used to pre-register the images are available in [DataHandle.py](https://github.com/neuropoly/pediatric-DL-registration/blob/main/scripts/DataHandle.py)
+ANTs commands used to pre-register the images are available in [DataHandle.py](https://github.com/neuropoly/pediatric-DL-registration/blob/main/scripts/DataHandle.py) where the [ANTs version](https://github.com/ANTsX/ANTs/releases) used is 2.3.4.dev172-gc801b.
 
 # References
 
