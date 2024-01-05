@@ -35,6 +35,9 @@ The pair-based registration (with registration done on all possible pairs (431 p
 These three different inputs were used and compared SyN ANTs as shown in the figure below:
 ![](/images/fig-1.png "Scheme of all three initialization approaches used")
 
+As for the full pipeline, it is visible below:
+![](/images/fig-a3.png "Full pipeline")
+
 The [scripts folder](https://github.com/neuropoly/pediatric-DL-registration/tree/main/scripts) contains multiple functions and bash scripts for: <br /> 
 * Training all intra-subject pairs
 * Evaluating the registration learning-based approaches on segmentations after warping
@@ -44,7 +47,8 @@ ANTs commands used to pre-register the images are available in [DataHandle.py](h
 
 ## Analyses
 
-Graphs of the Dice score results versus the age interval between pairs are available in the article for white matter, gray matter and cerebrospinal spinal fluid. Animated graphs have been generated to allow a more careful examination of the Dice scores resultes per age interval for each pair at a more local level for all 18 segmented regions (calculated by averaging right and left hemispheres for every region except brain-stem, 3rd ventricle, 4th ventricle, CSF which are as a whole in the initial 32 given labels). Here are the graphs for [NoReg](https://neuropoly.github.io/pediatric-DL-registration/AgePlot_NoReg.html), [RigidReg](https://neuropoly.github.io/pediatric-DL-registration/AgePlot_RigidReg.html) and [RigidAffineReg](https://neuropoly.github.io/pediatric-DL-registration/AgePlot_RigidAffineReg.html) for ANTs SyN Reg in red, DL Reg in green and the initial alignment in blue.  
+Graphs depicting Dice score results in relation to the age interval between pairs are included in the article for white matter, gray matter, and cerebrospinal spinal fluid. Animated graphs have been generated to facilitate a more detailed examination of Dice scores per age interval for each pair at a local level across all 18 segmented regions. These regions are calculated by averaging right and left hemispheres for every region, except for the brain-stem, 3rd ventricle, 4th ventricle, and CSF, which are considered as a whole in the initial 32 given labels. The provided graphs illustrate the results for [NoReg](https://neuropoly.github.io/pediatric-DL-registration/AgePlot_NoReg.html), [RigidReg](https://neuropoly.github.io/pediatric-DL-registration/AgePlot_RigidReg.html), and [RigidAffineReg](https://neuropoly.github.io/pediatric-DL-registration/AgePlot_RigidAffineReg.html), with ANTs SyN Reg in red, DL Reg in green, and the initial alignment in blue.
+
 ## References
 
 [1]DeepReg. Image Registration with Deep Learning. 2021. url: https://deepreg.readthedocs.io/en/latest/tutorial/registration.html. <br />
