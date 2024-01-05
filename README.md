@@ -26,7 +26,7 @@ Images were first N4 bias field corrected were inputted to [SynthSeg](https://su
 
 ## Procedure
 
-The pair-based registration (with registration done on all possible pairs (431 pairs)) evaluated three types of initialization approaches after pre-processing steps:
+The pair-based registration (with registration done on all possible pairs (434 pairs)) evaluated three types of initialization approaches after pre-processing steps:
 
 * Non previously registered intra-subject pairs (NoReg)
 * Rigidly registered via ANTs intra-subject pairs (RigidReg)
