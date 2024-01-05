@@ -22,8 +22,7 @@ subject. The selected 64 subjects are presented in PatientDict.txt with the firs
 column being the subject and the second all image scanIDs. <br />
 
 ## Preprocessing
-Images were first N4 bias field corrected as well as rescaled to 1.5 mm isotropic resolution using FLIRT version 6.0 (-applyisoxfm option).
-Template-based registration (with every image registered in a pediatric template space; [NIST 4.5-8.5 y.o. pediatric atlas](http://nist.mni.mcgill.ca/pediatric-atlases-4-5-18-5y/)) was used to obtain white matter (WM), gray matter (GM) and cerebrospinal fluid (CSF) segmentations for each subject for validation puposes. 
+Images were first N4 bias field corrected were inputted to [SynthSeg](https://surfer.nmr.mgh.harvard.edu/fswiki/SynthSeg) version 2.0 to obtain 18 brain regions of interest for validation purposes. Then, images were rescaled to 1.5 mm isotropic resolution using FLIRT version 6.0 (-applyisoxfm option).
 
 ## Procedure
 
@@ -34,7 +33,7 @@ The pair-based registration (with registration done on all possible pairs (431 p
 * Rigid and affine registered via ANTs intra-subject pairs (RigidAffineReg)
 
 These three different inputs were used and compared SyN ANTs as shown in the figure below:
-![](/images/schema_global.png "Scheme of all three initialization approaches used")
+![](/images/fig-1.png "Scheme of all three initialization approaches used")
 
 The [scripts folder](https://github.com/neuropoly/pediatric-DL-registration/tree/main/scripts) contains multiple functions and bash scripts for: <br /> 
 * Training all intra-subject pairs
