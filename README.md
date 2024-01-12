@@ -2,7 +2,7 @@
 
 ## Objectives
 The objective of this project is to use deep learning (DL) techniques for registering
-pediatric brain MRI scans and allowing quicker processing time. 
+pediatric brain MRI scans and inspecting different initialization methods. 
 [DeepReg version 0.0.0](https://deepreg.readthedocs.io/en/develop/tutorial/registration.html) [1] is used to implement the unsupervised learning-based registration task. The only main modification is the removal of affine data augmentation in the automatic pre-processing steps available in their framework. It is a tensorflow based implementation DL toolbox with unsupervised and weakly-supervised algorithms. The U-Net architecture was used and the output is a dense displacement field (DDF). One can easily train different networks using configuration files. The [config files](https://github.com/neuropoly/pediatric-DL-registration/tree/main/config_files) used in this work are available in this repository. DeepReg's GitHub repository [2] is available for further consultations with scripts coded in Python. 
 
 ## Requirements
@@ -22,7 +22,7 @@ subject. The selected 64 subjects are presented in PatientDict.txt with the firs
 column being the subject and the second all image scanIDs. <br />
 
 ## Preprocessing
-Images were first N4 bias field corrected were inputted to [SynthSeg](https://surfer.nmr.mgh.harvard.edu/fswiki/SynthSeg) version 2.0 to obtain 18 brain regions of interest for validation purposes. Then, images were rescaled to 1.5 mm isotropic resolution using FLIRT version 6.0 (-applyisoxfm option).
+Initially, the images underwent N4 bias field correction before being processed through [SynthSeg](https://surfer.nmr.mgh.harvard.edu/fswiki/SynthSeg) version 2.0 to obtain 18 brain regions of interest for validation purposes. Subsequently, the images were rescaled to a 1.5 mm isotropic resolution using FLIRT version 6.0 with the (-applyisoxfm option).
 
 ## Procedure
 
@@ -32,13 +32,13 @@ The pair-based registration (with registration done on all possible pairs (434 p
 * Rigidly registered via ANTs intra-subject pairs (RigidReg)
 * Rigid and affine registered via ANTs intra-subject pairs (RigidAffineReg)
 
-These three different inputs were used and compared SyN ANTs as shown in the figure below:
+All three distinct inputs were employed in both DL-based and SyN ANTs [3] registration schemes, as illustrated in the figure below. A comparative analysis was conducted, considering Dice score results, pre-registration and registration time, the number of negative Jacobian determinants, and the sum absolute of log Jacobian determinants to evaluate their respective performance.
 ![](/images/fig-1.png "Scheme of all three initialization approaches used")
 
 As for the full pipeline, it is visible below:
 ![](/images/fig-a3.png "Full pipeline")
 
-The [scripts folder](https://github.com/neuropoly/pediatric-DL-registration/tree/main/scripts) contains multiple functions and bash scripts for: <br /> 
+The [scripts folder](https://github.com/neuropoly/pediatric-DL-registration/tree/main/scripts) contains multiple functions and bash scripts for all analyses that were conducted, including: <br /> 
 * Training all intra-subject pairs
 * Evaluating the registration learning-based approaches on segmentations after warping
 * Jacobian determinant calculations
@@ -52,10 +52,12 @@ Graphs depicting Dice score results in relation to the age interval between pair
 ## References
 
 [1]DeepReg. Image Registration with Deep Learning. 2021. url: https://deepreg.readthedocs.io/en/latest/tutorial/registration.html. <br />
-[2]DeepReg. Medical image registration using deep learning. 2021. url: https://github.com/DeepRegNet/DeepReg.
+[2]DeepReg. Medical image registration using deep learning. 2021. url: https://github.com/DeepRegNet/DeepReg. <br />
+[3]Avants BB, Epstein CL, Grossman M, Gee JC. Symmetric diffeomorphic image registration with cross-correlation: evaluating automated labeling of elderly and neurodegenerative brain. Med Image Anal. 2008 Feb;12(1):26-41. doi: 10.1016/j.media.2007.06.004. Epub 2007 Jun 23. PMID: 17659998; PMCID: PMC2276735.
 
 ## Citing this work
+
 If some of these implementations helped you, please don't hesitate to cite the followings:
-- A. Dimitrijevic, V. Noblet, and B. De Leener, “Deep Learning-Based Longitudinal Intra-subject Registration of Pediatric Brain MR Images,” in Biomedical Image Registration, 2022, pp. 206–210.
--...
+- Dimitrijevic, A., Noblet, V., De Leener, B. (2022). Deep Learning-Based Longitudinal Intra-subject Registration of Pediatric Brain MR Images. In: Hering, A., Schnabel, J., Zhang, M., Ferrante, E., Heinrich, M., Rueckert, D. (eds) Biomedical Image Registration. WBIR 2022. Lecture Notes in Computer Science, vol 13386. Springer, Cham. https://doi.org/10.1007/978-3-031-11203-4_24
+
 
