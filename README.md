@@ -1,4 +1,4 @@
-# Impact of initialization on intra-subject pediatric brain MR image registration: A comparative analysis between SyN ANTs and deep learning-based approaches
+# Impact of Initialization on Intra-Subject Pediatric Brain MR Image Registration: A Comparative Analysis Between SyN ANTs and Deep Learning-Based Approaches
 
 ## Objectives
 The objective of this project is to use deep learning (DL) techniques for registering
