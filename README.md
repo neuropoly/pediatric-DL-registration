@@ -1,4 +1,4 @@
-# pediatric-DL-registration
+# Impact of initialization on intra-subject pediatric brain MR image registration: A comparative analysis between SyN ANTs and deep learning-based approaches
 
 ## Objectives
 The objective of this project is to use deep learning (DL) techniques for registering
@@ -58,7 +58,7 @@ Graphs depicting Dice score results in relation to the age interval between pair
 ## Citing this work
 
 If some of these implementations helped you, please don't hesitate to cite the followings:
-- WBIR 2022 Proceedings:
+- Previous Related Work in WBIR 2022 Proceedings:
 ```bib
 
 @INPROCEEDINGS{Dimitrijevic2022-ns,
