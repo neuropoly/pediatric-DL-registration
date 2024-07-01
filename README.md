@@ -58,6 +58,38 @@ Graphs depicting Dice score results in relation to the age interval between pair
 ## Citing this work
 
 If some of these implementations helped you, please don't hesitate to cite the followings:
-- Dimitrijevic, A., Noblet, V., De Leener, B. (2022). Deep Learning-Based Longitudinal Intra-subject Registration of Pediatric Brain MR Images. In: Hering, A., Schnabel, J., Zhang, M., Ferrante, E., Heinrich, M., Rueckert, D. (eds) Biomedical Image Registration. WBIR 2022. Lecture Notes in Computer Science, vol 13386. Springer, Cham. https://doi.org/10.1007/978-3-031-11203-4_24
+- WBIR 2022 Proceedings:
+```bib
+
+@INPROCEEDINGS{Dimitrijevic2022-ns,
+  title     = "Deep {Learning-Based} Longitudinal Intra-subject Registration of
+               Pediatric Brain {MR} Images",
+  booktitle = "Biomedical Image Registration",
+  author    = "Dimitrijevic, Andjela and Noblet, Vincent and De Leener,
+               Benjamin",
+  publisher = "Springer International Publishing",
+  pages     = "206--210",
+  year      =  2022
+}
+
+```
+- MELBA 2024 Special Issue on Image Registration:
+```bib
+@ARTICLE{Dimitrijevic2024-pb,
+  title     = "Impact of initialization on intra-subject pediatric brain {MR}
+               image registration: A comparative analysis between {SyN} {ANTs}
+               and deep learning-based approaches",
+  author    = "Dimitrijevic, Andjela and Noblet, Vincent and De Leener,
+               Benjamin",
+  journal   = "J. Mach. Learn. Biomed. Imaging",
+  publisher = "Machine Learning for Biomedical Imaging",
+  volume    =  2,
+  number    = "Image Registration",
+  pages     = "916--955",
+  month     =  jun,
+  year      =  2024,
+  language  = "en"
+}
+```
 
 
